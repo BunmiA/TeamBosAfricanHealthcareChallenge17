@@ -1,0 +1,27 @@
+{
+  "name": "gameNight",
+  "authors": [
+    "Olubunmi Aworanti <olubunmi.aworanti@gmail.com>"
+  ],
+  "description": "app to mange my games night",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+        "bootstrap": "latest",
+        "font-awesome": "latest",
+        "animate.css": "latest",
+        "angular": "latest",
+        "angular-route": "latest" , 
+        "angular-resource": "latest" , 
+        "angular-chart.js": "latest"
+    }
+}

@@ -1,0 +1,57 @@
+{
+  "name": "African-Health-Challenge-17",
+  "version": "0.1.0",
+  "_npmVersion": "3.10.3",
+  "dependencies": {
+    "angular-chart.js": "^1.1.1",
+    "angular-messages": "^1.6.1",
+    "app-config": "^1.0.0",
+    "body-parser": "^1.15.2",
+    "chart.js": "^2.4.0",
+    "express": "4.14.0",
+    "install": "^0.8.4",
+    "mongoose": "^4.7.7"
+  },
+  "description": "African Health Challenge Hackathon",
+  "devDependencies": {
+    "angular": "^1.5.8",
+    "angular-mocks": "^1.5.8",
+    "angular-ui-router": "^0.3.1",
+    "chai": "^3.5.0",
+    "grunt": "~1.0.1",
+    "install": "^0.8.4"
+  },
+  "scripts": {
+    "start": "NODE_ENV=prod node service.js"
+  },
+  "engines": {
+    "node": "6.5.0"
+  },
+  "directories": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BunmiA/TeamBosAfricanHealthcareChallenge17.git"
+  },
+  "files": [
+    "dist",
+    "fonts",
+    "grunt",
+    "js/*.js",
+    "less/**/*.less",
+    "Gruntfile.js",
+    "LICENSE"
+  ],
+  "keywords": [
+    "css",
+    "less",
+    "mobile-first",
+    "responsive",
+    "front-end",
+    "framework",
+    "web",
+    "node",
+    "heroku",
+    "express"
+  ],
+  "main": "./dist/js/npm"
+}
