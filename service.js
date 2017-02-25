@@ -134,7 +134,7 @@ app.post('/sms', function(req, res) {
     var twilio = require('twilio');
     var twiml = new twilio.TwimlResponse();
     if (req.body.Body == 'hello') {
-        twiml.message('Hi! Food Buddy here :)');
+        twiml.message('Hi! Chop Well here :)');
     } else if(req.body.Body == 'bye') {
         twiml.message('Goodbye');
     } else {
@@ -165,7 +165,7 @@ app.post('/submit', function(req, res) {
      client.sendMessage({
          to: number, //user's number
          from: '+441548312025', //twilio number
-         body: 'Hi '+name+'!A big hello from Food Buddie!We are going to help you achieve '+ aim + ' and tackle '+ condition+'.Thanks for registering!'
+         body: 'Hi '+name+'!A big hello from Chop Well!We are going to help you achieve '+ aim + ' and tackle '+ condition+'.Thanks for registering!'
      });
 
     //sleep for 10 seconds
