@@ -172,15 +172,9 @@ app.post('/sms', function(req, res) {
 //    var q5=userText.charAt(userText.indexOf(6));
 //    var q6=userText.charAt(userText.indexOf(8));
 
-  setTimeout(function(){
-    console.log("Sleep for 3 seconds");
-
     twiml.message('View your Chop Well weekly summary at: https://bos-africanhealthcarechal17.herokuapp.com/NutritionStatus/1');
     res.writeHead(200, {'Content-Type': 'text/xml'});
     res.end(twiml.toString());
-    }, 30000);
-
-
 
 });
 
@@ -216,7 +210,7 @@ app.post('/submit', function(req, res) {
     client.sendMessage({
                 to: number, //user's number
                 from: '+441548312025', //twilio number
-                body: '\nPlease send us answers to these questions in the following format(in one text message):\n\na1 b2 c1 d4 e2 f1 g1\na. How many meals did you eat today?\nHow many meals did you eat today with:\nb.grains (e.g. bread or rice)?\nc.beans and/or ground nuts?\nd.fruits (e.g. pawpaw, pineapple)\ne.vegetables (e.g. efo)?\nf.protein (e.g. meat, chicken, fish)?\ng.eggs or milk?'
+                body: '\nPlease send us answers to these questions in the following format(in one text message):\n\na1 b2 c1 d4 e2 f1 g1\na. How many meals did you eat today?\nHow many meals did you eat today with:\nb.grains (e.g. bread or rice)?\nc.beans and/or ground nuts?\nd.fruits (e.g. pawpaw, pineapple)\ne.vegetables (e.g. efo)?\nf.meat or fish?\ng.eggs or milk?'
                 });
 
     }, 30000);
