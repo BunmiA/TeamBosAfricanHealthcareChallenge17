@@ -9,7 +9,7 @@ $scope.getNutriStats =  function () {
     });
 };
 
-$scope.getNutriStats();
+// $scope.getNutriStats();
 
 $scope.userId =1;
 
