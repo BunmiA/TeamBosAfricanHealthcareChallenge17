@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Basic Page Needs
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>eam BOS African Healthcare Challenge 17</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Metas
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../css/skeleton.css"> 
+
+  </head>
+  <body  ng-app=”AfricanHealthcareChallenge17App” ng-controller="NutriStatsController" >
+
+    <!-- Primary Page Layout
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="container">
+      <!-- 	<div class="row"> -->
+      <div class="one-half column" style="margin-top: 2%"> 
+      <h1>Chop Well</h1>
+      <div>
+      <h5>{{userObj.Name}}</h5>
+      <h5>{{userObj.DailyMessage}}</h5>
+      </div>
+      <div>
+      <h3>Today's Nutrition Metrics</h3>
+      <canvas id="bar" class="chart chart-bar"
+      chart-data="userObj.data" chart-labels="userObj.labels" chart-options="chartOptions">
+  </canvas> 
+      </div>
+
+</div>
+</div>
+
+  <!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
