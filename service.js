@@ -13,6 +13,7 @@ var mongoose = require('mongoose');
 
 var bodyParser = require('body-parser');
 
+var twilio = require('twilio');
 
 
 
@@ -121,4 +122,19 @@ app.get('*', function(req, res) {
         res.sendFile(__dirname + '/public/index.html'); // load our public/index.html file
     });
 
+app.post('/sms', function(req, res) {
+  var twilio = require('twilio');
+  var twiml = new twilio.TwimlResponse();
+  twiml.message('Food buddie has received your message');
+  res.writeHead(200, {'Content-Type': 'text/xml'});
+  res.end(twiml.toString());
+});
+
+app.post('/submit', function(req, res) {
+//  var twilio = require('twilio');
+//  var twiml = new twilio.TwimlResponse();
+//  twiml.message('The Robots are coming! Head for the hills!');
+//  res.writeHead(200, {'Content-Type': 'text/xml'});
+//  res.end(twiml.toString());
+});
 
