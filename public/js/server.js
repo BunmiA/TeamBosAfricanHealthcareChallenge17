@@ -7,9 +7,17 @@ var app = express();
 app.post('/sms', function(req, res) {
   var twilio = require('twilio');
   var twiml = new twilio.TwimlResponse();
-  twiml.message('The Robots are coming! Head for the hills!');
+  twiml.message('Food buddie has received your message');
   res.writeHead(200, {'Content-Type': 'text/xml'});
   res.end(twiml.toString());
+});
+
+app.post('/submit', function(req, res) {
+//  var twilio = require('twilio');
+//  var twiml = new twilio.TwimlResponse();
+//  twiml.message('The Robots are coming! Head for the hills!');
+//  res.writeHead(200, {'Content-Type': 'text/xml'});
+//  res.end(twiml.toString());
 });
 
 http.createServer(app).listen(1337, function () {
