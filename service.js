@@ -205,7 +205,7 @@ app.post('/submit', function(req, res) {
      });
 
     setTimeout(function(){
-    console.log("Sleep for 10 seconds");
+    console.log("Sleep for 15 seconds");
 
     client.sendMessage({
                 to: number, //user's number
@@ -213,7 +213,7 @@ app.post('/submit', function(req, res) {
                 body: '\nPlease send us answers to these questions in the following format(in one text message):\n\na1 b2 c1 d4 e2 f1 g1\na. How many meals did you eat today?\nHow many meals did you eat today with:\nb.grains (e.g. bread or rice)?\nc.beans and/or ground nuts?\nd.fruits (e.g. pawpaw, pineapple)\ne.vegetables (e.g. efo)?\nf.meat or fish?\ng.eggs or milk?'
                 });
 
-    }, 30000);
+    }, 15000);
 
 
 
