@@ -136,6 +136,7 @@ res.header('Access-Control-Allow-Origin', '*');
      user.data= [10,89, 600,700,150];
 
     var json=JSON.stringify(user);
+    console.log(json);
     res.writeHead(200, {"Content-Type": "text/html"});
     res.send(json);
     });
