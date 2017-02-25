@@ -122,6 +122,7 @@ app.get('*', function(req, res) {
         res.sendFile(__dirname + '/public/index.html'); // load our public/index.html file
     });
 
+
 app.get('/getNutriStats', function(req, res) {
 res.header('Access-Control-Allow-Origin', '*');
 
@@ -137,7 +138,7 @@ res.header('Access-Control-Allow-Origin', '*');
 
     var json=JSON.stringify(user);
     console.log(json);
-    res.writeHead(200, {"Content-Type": "text/html"});
+    res.writeHead(200, {"Content-Type": "application/json"});
     res.send(json);
     });
 // app.post('/sms', function(req, res) {
