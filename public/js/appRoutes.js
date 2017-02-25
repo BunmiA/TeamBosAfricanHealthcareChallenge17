@@ -15,7 +15,7 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
         .when('/registration', {
             templateUrl: 'views/registration.html',
             controller: 'UserController'
-        }).when('/NutritionStatus', {
+        }).when('/NutritionStatus/:id', {
             templateUrl: 'views/NutritionStatus.html',
             controller: 'NutriStatsController'
         });
