@@ -71,13 +71,6 @@ app.set('port', (process.env.PORT || 3300));
  app.use(bodyParser.json());
 
 
-// function getHospital(name_val){
-//     Hospital.findOne({name: name_val }, function(err, hospital) {
-//       if (err) throw err;
-//       console.log(hospital);
-//   });
-// }
-
 
 
 app.get("/getHospital/:_id", function(req,res){
@@ -91,57 +84,64 @@ Hospital.findOne({_id: hospitalId }, function(err, hospital) {
     
 });
 
+app.get('/getNutritionStats', function (req, res) {
+   var user ={};
+        user.Name='Simi';
+        user.Number='+447414918685';
+        user.Age='24';
+        user.Aim='Longer/Thicker Hair';
+        user.Condition='Diabetes';
+        user.DailyMessage='You need more fish for thicker hair';
+        user.labels= ['VitA','VitB','Iodine','Iron','Zinc'];
+        user.data= [10,89, 600,700,150];
+  res.json(user);
+})
 
 
-// app.post("/addPatient", function(req,res) {
-//     console.log('adding Patient ro hospital based on request',req.body);
-//     res.status(200);
-//     // res.status(200).send(req.body);
-// });
-
-app.listen(app.get('port'), function(){
-  console.log('Server up: localhost:3300');
-});
 
 
-// function increaseData(id,val){
-//   Patient.findOneAndUpdate({ _id: id }, { $inc: { invoice: val }}, function(err, patient) {
-//   if (err) throw err;
-//   console.log(patient);
-// });
-  
-// };
-
-
-app.use(express.static(__dirname + '/public'));                 // set the static files location /public/img will be /img for users
 
 // app.use(express.static(__dirname));
 app.use(express.static(__dirname + '/public'));
 
-app.get('*', function(req, res) {
-        res.sendFile(__dirname + '/public/index.html'); // load our public/index.html file
-    });
+
+
+app.get('/getStats', function (req, res) {
+       var user ={};
+            user.Name='Simi';
+            user.Number='+447414918685';
+            user.Age='24';
+            user.Aim='Longer/Thicker Hair';
+            user.Condition='Diabetes';
+            user.DailyMessage='You need more fish for thicker hair';
+            user.labels= ['VitA','VitB','Iodine','Iron','Zinc'];
+            user.data= [10,89, 600,700,150];
+      res.json(user);
+});
 
 
 app.get('/getNutriStats', function(req, res) {
-res.header('Access-Control-Allow-Origin', '*');
+console.log('djkjdskjdkds')
+//res.header('Access-Control-Allow-Origin', '*');
 
-     var user ={};
-     user.Name='Simi';
-     user.Number='+447414918685';
-     user.Age='24';
-     user.Aim='Longer/Thicker Hair';
-     user.Condition='Diabetes';
-     user.DailyMessage='You need more fish for thicker hair';
-     user.labels= ['VitA','VitB','Iodine','Iron','Zinc'];
-     user.data= [10,89, 600,700,150];
+//     var user ={};
+//     user.Name='Simi';
+//     user.Number='+447414918685';
+//     user.Age='24';
+//     user.Aim='Longer/Thicker Hair';
+//     user.Condition='Diabetes';
+//     user.DailyMessage='You need more fish for thicker hair';
+//     user.labels= ['VitA','VitB','Iodine','Iron','Zinc'];
+//     user.data= [10,89, 600,700,150];
 
     //var json=JSON.stringify(user);
-    var json='sample';
-    console.log(json);
-//    res.writeHead(200, {"Content-Type": "application/json"});
-    res.send(json);
+    var jsonObj={};
+    jsonObj.name = "simi";
+    jsonObj.no='787878787'
+
+        res.json(jsonObj);
     });
+
 // app.post('/sms', function(req, res) {
 //   var twilio = require('twilio');
 //   var twiml = new twilio.TwimlResponse();
@@ -226,3 +226,13 @@ app.post('/submit', function(req, res) {
 //  res.end(twiml.toString());
 });
 
+app.get('*', function(req, res) {
+        res.sendFile(__dirname + '/public/index.html'); // load our public/index.html file
+    });
+
+app.listen(app.get('port'), function(){
+  console.log('Server up: localhost:3300');
+});
+
+
+module.exports = app
