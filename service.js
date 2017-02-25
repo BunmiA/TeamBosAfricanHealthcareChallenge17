@@ -131,9 +131,9 @@ res.header('Access-Control-Allow-Origin', '*');
      user.Age='24';
      user.Aim='Longer/Thicker Hair';
      user.Condition='Diabetes';
-     user.DailyMessage='You need more fish for thicker hair'
-     user.labels: ['VitA','VitB','Iodine','Iron','Zinc'],
-     user.data: [10,89, 600,700,150]
+     user.DailyMessage='You need more fish for thicker hair';
+     user.labels= ['VitA','VitB','Iodine','Iron','Zinc'];
+     user.data= [10,89, 600,700,150];
 
     res.json(user)
     });
