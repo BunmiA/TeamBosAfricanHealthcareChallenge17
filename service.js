@@ -145,6 +145,50 @@ app.post('/sms', function(req, res) {
 });
 
 app.post('/submit', function(req, res) {
+    var twilio = require('twilio');
+    var twiml = new twilio.TwimlResponse();
+
+    //log input
+    var userObj=req.body;
+    var name=userObj.Name;
+    console.log(name);
+    var number=userObj.Number;
+    console.log(number);
+    var age=userObj.Age;
+    console.log(age);
+    var aim=userObj.Aim;
+    console.log(aim);
+    var condition=userObj.Condition;
+    console.log(condition);
+
+     // Send the registry text message.
+     client.sendMessage({
+         to: number, //user's number
+         from: '+441548312025', //twilio number
+         body: 'Hi '+name+'!A big hello from Food Buddie!We are going to help you achieve '+ aim + ' and tackle '+ condition+'.Thanks for registering!'
+     });
+
+    //sleep for 10 seconds
+    function sleep(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
+    async function sleepNow() {
+      await sleep(10000);
+    }
+    sleepNow();
+
+     // Send the question text message.
+     client.sendMessage({
+         to: name,
+         from: '+441548312025', //twilio number
+         body: '*Questions go here*'
+     });
+
+    res.writeHead(200, {'Content-Type': 'text/xml'});
+    res.end(twiml.toString());
+});
+
+app.post('/submit', function(req, res) {
 //  var twilio = require('twilio');
 //  var twiml = new twilio.TwimlResponse();
 //  twiml.message('The Robots are coming! Head for the hills!');
