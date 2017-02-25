@@ -1,4 +1,4 @@
-angular.module('UserCtrl', []).controller('UserController',function($scope,$http,$interval,UserService) {
+angular.module('UserCtrl', []).controller('UserController',function($scope,$http,$interval,$location,UserService) {
 
 
 $scope.submituserInfo = function() {
@@ -9,6 +9,8 @@ $scope.submituserInfo = function() {
 		console.log('response is',response);
 		console.log('response is currently', $scope.UserObj);
 		refresh();
+		// window.location = "regSucess.html";
+		$location.url('/regSucess')
 	},function(error) {
               // promise rejected, could log the error with: console.log('error', error);
               $scope.status = 'Unable to add Guest BYO: ' + error.message;

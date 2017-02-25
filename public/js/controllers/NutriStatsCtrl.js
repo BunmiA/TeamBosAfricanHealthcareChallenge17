@@ -9,20 +9,36 @@ $scope.getNutriStats =  function () {
     });
 };
 
-// $scope.getNutriStats();
+$scope.getNutriStats =  function () {
+ 	console.log("getting NutriStats")
+  NutriStatsService.getNutriStats().then(function(response) {
+    	console.log(response.data);
+        $scope.userObj = response.data;
+        console.log($scope.userObj);
+    });
+};
 
-$scope.userId =1;
+$scope.getNutriStats();
 
- $scope.userObj = {
- 	Name:'Simi',
- 	Number: '092083908e',
- 	Age:'',
- 	Aim:'',
- 	Condition:'',
- 	DailyMessage:'You need more fish for better hair',
- 	labels: ['VitA','VitB','Iodine','Iron','Zinc'],
- 	data: [10,89, 600,700,150]
-  };
+ // $scope.userId =1;
+
+ // $scope.userObj = {
+ // 	Name:'Simi',
+ // 	Number: '092083908e',
+ // 	Age:'',
+ // 	Aim:'',
+ // 	Condition:'',
+ // 	DailyMessage:'You need more fish for better hair',
+ // 	labels: ['VitA','VitB','Iodine','Iron','Zinc'],
+ // 	data: [10,89, 600,700,150]
+ //  };
+
+ $scope.chartOptions= {
+ legend: {
+            display: true,
+            position:'right'
+        }
+};
 
 
 });
