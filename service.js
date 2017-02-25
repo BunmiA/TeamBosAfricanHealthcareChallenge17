@@ -206,9 +206,8 @@ app.post('/submit', function(req, res) {
     client.sendMessage({
                 to: number, //user's number
                 from: '+441548312025', //twilio number
-                body: '\nToday, did you eat:\n1.grains (e.g. bread or rice)?\n2.beans and/or ground nuts?\n3.fruits (e.g. pawpaw, pineapple)\n4.vegetables (e.g. efo)?\n5.protein (e.g. meat, chicken, fish)?\n6.eggs or milk?'
-            });
-
+                body: '\nPlease send us answers to these questions in the following format(in one text message):\n\na1 b2 c1 d4 e2 f1 g1\na. How many meals did you eat today?\nHow many meals did you eat today with:\nb.grains (e.g. bread or rice)?\nc.beans and/or ground nuts?\nd.fruits (e.g. pawpaw, pineapple)\ne.vegetables (e.g. efo)?\nf.protein (e.g. meat, chicken, fish)?\ng.eggs or milk?'
+                });
 
     }, 30000);
 
