@@ -136,9 +136,10 @@ res.header('Access-Control-Allow-Origin', '*');
      user.labels= ['VitA','VitB','Iodine','Iron','Zinc'];
      user.data= [10,89, 600,700,150];
 
-    var json=JSON.stringify(user);
+    //var json=JSON.stringify(user);
+    var json='sample';
     console.log(json);
-    res.writeHead(200, {"Content-Type": "application/json"});
+//    res.writeHead(200, {"Content-Type": "application/json"});
     res.send(json);
     });
 // app.post('/sms', function(req, res) {
