@@ -122,12 +122,26 @@ app.get('*', function(req, res) {
         res.sendFile(__dirname + '/public/index.html'); // load our public/index.html file
     });
 
+// app.post('/sms', function(req, res) {
+//   var twilio = require('twilio');
+//   var twiml = new twilio.TwimlResponse();
+//   twiml.message('Food buddie has received your message');
+//   res.writeHead(200, {'Content-Type': 'text/xml'});
+//   res.end(twiml.toString());
+// });
+
 app.post('/sms', function(req, res) {
-  var twilio = require('twilio');
-  var twiml = new twilio.TwimlResponse();
-  twiml.message('Food buddie has received your message');
-  res.writeHead(200, {'Content-Type': 'text/xml'});
-  res.end(twiml.toString());
+    var twilio = require('twilio');
+    var twiml = new twilio.TwimlResponse();
+    if (req.body.Body == 'hello') {
+        twiml.message('Hi! Food Buddy here :)');
+    } else if(req.body.Body == 'bye') {
+        twiml.message('Goodbye');
+    } else {
+        twiml.message('No Body param match, Twilio sends this in the request to your server.');
+    }
+    res.writeHead(200, {'Content-Type': 'text/xml'});
+    res.end(twiml.toString());
 });
 
 app.post('/submit', function(req, res) {
