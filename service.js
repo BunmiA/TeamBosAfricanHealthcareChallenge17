@@ -161,6 +161,8 @@ app.post('/submit', function(req, res) {
     var condition=userObj.Condition.name;
     console.log(condition);
 
+    var client = twilio('ACba2f6c1d1384b841bedde2d86f09ffe4', '513fca91f166413f3995811fe5e7bdfb');
+
      // Send the registry text message.
      client.sendMessage({
          to: number, //user's number
