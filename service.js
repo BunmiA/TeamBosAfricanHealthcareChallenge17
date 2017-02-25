@@ -92,8 +92,11 @@ app.get('/getNutritionStats', function (req, res) {
         user.Aim='Increased Energy Levels';
         user.Condition='Anaemia';
         user.DailyMessage='For healthy high energy,it is important to maintain high levels of Iron,Vitamin B12 and Vitamin B9.';
-        user.labels= ['VitA','VitB','Iodine','Iron','Zinc'];
-        user.data= [10,89, 600,700,150];
+
+        user.labels1= ['Beans/Nuts','Grains','Eggs/Milk','Meat/Fish','Vegetable','Fruits'];
+        user.data1= [11,6,12,4,7,15];
+        user.labels2= ['Calcium','Zinc','Iron','Vitamin A','Vitamin B9','Vitamin B12','Vitamin D','Vitamin E'];
+        user.data2= [2,2,2,2,2,2,2,2];
         console.log(user);
   res.json(user);
 })
