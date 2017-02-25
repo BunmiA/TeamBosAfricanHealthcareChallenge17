@@ -18,6 +18,8 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
         }).when('/NutritionStatus/:id', {
             templateUrl: 'views/NutritionStatus.html',
             controller: 'NutriStatsController'
+        }).when('/regSucess', {
+            templateUrl: 'views/regSucess.html',
         });
 
     $locationProvider.html5Mode(true);
