@@ -89,9 +89,9 @@ app.get('/getNutritionStats', function (req, res) {
         user.Name='Simi';
         user.Number='+447414918685';
         user.Age='24';
-        user.Aim='Longer/Thicker Hair';
-        user.Condition='Diabetes';
-        user.DailyMessage='You need more fish for thicker hair';
+        user.Aim='Increased Energy Levels';
+        user.Condition='Anaemia';
+        user.DailyMessage='For healthy high energy,it is important to maintain high levels of Iron,Vitamin B12 and Vitamin B9.';
         user.labels= ['VitA','VitB','Iodine','Iron','Zinc'];
         user.data= [10,89, 600,700,150];
   res.json(user);
