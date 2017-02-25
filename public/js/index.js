@@ -7,6 +7,6 @@
  client.sendMessage({
      to: '+447414918685', //simi's number
      from: '+441548312025', //twilio number
-     body: 'Thanks for registering with Twilio!'
+     body: 'A big hello from Food Buddie!Thanks for registering!'
  });
 
