@@ -175,7 +175,7 @@ app.post('/sms', function(req, res) {
   setTimeout(function(){
     console.log("Sleep for 3 seconds");
 
-    twiml.message('View your Chop Well weekly summary at: https://bos-africanhealthcarechal17.herokuapp.com/NutritionStatus/1'+);
+    twiml.message('View your Chop Well weekly summary at: https://bos-africanhealthcarechal17.herokuapp.com/NutritionStatus/1');
     res.writeHead(200, {'Content-Type': 'text/xml'});
     res.end(twiml.toString());
     }, 30000);
