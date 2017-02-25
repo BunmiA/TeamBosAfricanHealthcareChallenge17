@@ -10,7 +10,8 @@
     "chart.js": "^2.4.0",
     "express": "4.14.0",
     "install": "^0.8.4",
-    "mongoose": "^4.7.7"
+    "mongoose": "^4.7.7",
+    "twilio": "*"
   },
   "description": "African Health Challenge Hackathon",
   "devDependencies": {
@@ -19,8 +20,7 @@
     "angular-ui-router": "^0.3.1",
     "chai": "^3.5.0",
     "grunt": "~1.0.1",
-    "install": "^0.8.4",
-    "twilio": "*"
+    "install": "^0.8.4"
 
   },
   "scripts": {
