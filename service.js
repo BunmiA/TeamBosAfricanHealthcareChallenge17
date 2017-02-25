@@ -156,9 +156,9 @@ app.post('/submit', function(req, res) {
     console.log(number);
     var age=userObj.Age;
     console.log(age);
-    var aim=userObj.Aim;
+    var aim=userObj.Aim.name;
     console.log(aim);
-    var condition=userObj.Condition;
+    var condition=userObj.Condition.name;
     console.log(condition);
 
      // Send the registry text message.
