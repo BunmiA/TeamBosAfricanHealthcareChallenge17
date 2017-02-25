@@ -167,7 +167,7 @@ app.post('/submit', function(req, res) {
      client.sendMessage({
          to: number, //user's number
          from: '+441548312025', //twilio number
-         body: 'Hi '+name+'!A big hello from Chop Well!We are going to help you achieve '+ aim + ' and tackle '+ condition+'.Thanks for registering!'
+         body: '\nHi '+name+'!A big hello from Chop Well!We are going to help you achieve '+ aim + ' and tackle '+ condition+'.Thanks for registering!'
      });
 
     setTimeout(function(){
@@ -177,7 +177,7 @@ app.post('/submit', function(req, res) {
     client.sendMessage({
          to: number, //user's number
          from: '+441548312025', //twilio number
-         body: 'Today, did you eat:\n1.grains (e.g. bread or rice)?\n2.beans and/or ground nuts?\n3.fruits (e.g. pawpaw, pineapple)\n4.vegetables (e.g. efo)?\n5.protein (e.g. meat, chicken, fish)?\n6.eggs or milk?'
+         body: '\nToday, did you eat:\n1.grains (e.g. bread or rice)?\n2.beans and/or ground nuts?\n3.fruits (e.g. pawpaw, pineapple)\n4.vegetables (e.g. efo)?\n5.protein (e.g. meat, chicken, fish)?\n6.eggs or milk?'
      });
 
     res.writeHead(200, {'Content-Type': 'text/xml'});
