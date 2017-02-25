@@ -122,6 +122,21 @@ app.get('*', function(req, res) {
         res.sendFile(__dirname + '/public/index.html'); // load our public/index.html file
     });
 
+app.get('/getNutriStats', function(req, res) {
+res.header('Access-Control-Allow-Origin', '*');
+
+     var user ={};
+     user.Name='Simi';
+     user.Number='+447414918685';
+     user.Age='24';
+     user.Aim='Longer/Thicker Hair';
+     user.Condition='Diabetes';
+     user.DailyMessage='You need more fish for thicker hair'
+     user.labels: ['VitA','VitB','Iodine','Iron','Zinc'],
+     user.data: [10,89, 600,700,150]
+
+    res.json(user)
+    });
 // app.post('/sms', function(req, res) {
 //   var twilio = require('twilio');
 //   var twiml = new twilio.TwimlResponse();
@@ -140,6 +155,16 @@ app.post('/sms', function(req, res) {
     } else {
         twiml.message('No Body param match, Twilio sends this in the request to your server.');
     }
+//    var userText=req.body.Body;
+//    userText=userText.replace(/\s+/g, ''); //remove whitespace
+//    var q1=userText.charAt(userText.indexOf(0));
+//    var q2=userText.charAt(userText.indexOf(2));
+//    var q3=userText.charAt(userText.indexOf(4));
+//    var q4=userText.charAt(userText.indexOf(5));
+//    var q5=userText.charAt(userText.indexOf(6));
+//    var q6=userText.charAt(userText.indexOf(8));
+
+
     res.writeHead(200, {'Content-Type': 'text/xml'});
     res.end(twiml.toString());
 });
