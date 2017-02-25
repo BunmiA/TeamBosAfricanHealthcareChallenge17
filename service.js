@@ -169,20 +169,20 @@ app.post('/submit', function(req, res) {
      });
 
     //sleep for 10 seconds
-    function sleep(ms) {
-      return new Promise(resolve => setTimeout(resolve, ms));
-    }
-    async function sleepNow() {
-      await sleep(10000);
-    }
-    sleepNow();
-
-     // Send the question text message.
-     client.sendMessage({
-         to: name,
-         from: '+441548312025', //twilio number
-         body: '*Questions go here*'
-     });
+//    function sleep(ms) {
+//      return new Promise(resolve => setTimeout(resolve, ms));
+//    }
+//    async function sleepNow() {
+//      await sleep(10000);
+//    }
+//    sleepNow();
+//
+//     // Send the question text message.
+//     client.sendMessage({
+//         to: name,
+//         from: '+441548312025', //twilio number
+//         body: '*Questions go here*'
+//     });
 
     res.writeHead(200, {'Content-Type': 'text/xml'});
     res.end(twiml.toString());
