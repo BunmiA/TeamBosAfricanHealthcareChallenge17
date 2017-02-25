@@ -1,1 +1,1 @@
-angular.module('AfricanHealthcareChallenge17App', ['ngMessages','ngRoute', 'appRoutes', 'HospitalCtrl', 'HospitalService','chart.js']);
+angular.module('AfricanHealthcareChallenge17App', ['ngMessages','ngRoute', 'appRoutes', 'HospitalCtrl', 'HospitalService','UserCtrl','UserService','chart.js']);

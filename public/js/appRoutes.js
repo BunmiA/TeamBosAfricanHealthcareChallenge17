@@ -11,6 +11,10 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
         .when('/hospital', {
             templateUrl: 'views/hospital.html',
             controller: 'HospitalController'
+        })
+        .when('/registration', {
+            templateUrl: 'views/registration.html',
+            controller: 'UserController'
         });
 
     $locationProvider.html5Mode(true);
