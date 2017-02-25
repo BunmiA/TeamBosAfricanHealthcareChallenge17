@@ -135,7 +135,8 @@ res.header('Access-Control-Allow-Origin', '*');
      user.labels= ['VitA','VitB','Iodine','Iron','Zinc'];
      user.data= [10,89, 600,700,150];
 
-    res.send(JSON.stringify(user));
+    var json=JSON.stringify(user);
+    res.send(json);
     });
 // app.post('/sms', function(req, res) {
 //   var twilio = require('twilio');
