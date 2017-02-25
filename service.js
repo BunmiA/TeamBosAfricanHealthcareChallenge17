@@ -172,7 +172,7 @@ app.post('/submit', function(req, res) {
 
     setTimeout(function(){
     console.log("Sleep for 10 seconds")
-    }, 20000);
+    }, 30000);
 
     client.sendMessage({
          to: number, //user's number
