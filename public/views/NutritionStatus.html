@@ -33,9 +33,15 @@
           <h5>{{userObj.DailyMessage}}</h5>
         </div>
         <div>
-          <h4>Today's Nutrition Metrics</h4>
+          <h4>Weekly Nutrition Metrics</h4>
           <canvas id="pie" class="chart chart-pie"
-          chart-data="userObj.data" chart-labels="userObj.labels" chart-options="chartOptions">
+          chart-data="userObj.data1" chart-labels="userObj.labels1" chart-options="chartOptions">
+        </canvas> 
+      </div>
+        <div>
+          <h4>Your Nutrition profile</h4>
+          <canvas id="pie" class="chart chart-pie"
+          chart-data="userObj.data2" chart-labels="userObj.labels2" chart-options="chartOptions">
         </canvas> 
       </div>
 
