@@ -172,13 +172,17 @@ app.post('/submit', function(req, res) {
 
     setTimeout(function(){
     console.log("Sleep for 10 seconds");
-    }, 30000);
 
     client.sendMessage({
-            to: number, //user's number
-            from: '+441548312025', //twilio number
-            body: '\nToday, did you eat:\n1.grains (e.g. bread or rice)?\n2.beans and/or ground nuts?\n3.fruits (e.g. pawpaw, pineapple)\n4.vegetables (e.g. efo)?\n5.protein (e.g. meat, chicken, fish)?\n6.eggs or milk?'
-        });
+                to: number, //user's number
+                from: '+441548312025', //twilio number
+                body: '\nToday, did you eat:\n1.grains (e.g. bread or rice)?\n2.beans and/or ground nuts?\n3.fruits (e.g. pawpaw, pineapple)\n4.vegetables (e.g. efo)?\n5.protein (e.g. meat, chicken, fish)?\n6.eggs or milk?'
+            });
+
+
+    }, 30000);
+
+
 
     res.writeHead(200, {'Content-Type': 'text/xml'});
     res.end(twiml.toString());
