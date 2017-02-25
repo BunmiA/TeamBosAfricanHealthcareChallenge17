@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Basic Page Needs
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>eam BOS African Healthcare Challenge 17</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Metas
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../css/skeleton.css"> 
+
+  </head>
+  <body  ng-app=”AfricanHealthcareChallenge17App” ng-controller="UserController" >
+
+    <!-- Primary Page Layout
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="container">
+      <!-- 	<div class="row"> -->
+      <div class="one-half column" style="margin-top: 2%"> 
+      <h1>Chop Well</h1>
+       <div>
+        <form ng-submit="submituserInfo()" name="userInfo" >
+          <div class="form-group">
+            <label>Name</label>
+            <input type="text" ng-model="userObj.Name" required="true" name="name" />
+          </div>
+          <div class="form-group">
+           <label >Number</label>
+           <input type="text" ng-model="userObj.Number" required="true" name="name" />
+         </div>
+         <div class="form-group">
+          <label>Age</label>
+          <input class="u-max-full-width" required="true" type="number" ng-model="userObj.Age" name="mixers" />
+        </div>
+        <div class="form-group">
+          <label >What you want to achieve</label>
+          <select ng-model="userObj.Aim" ng-options="aim.name for aim in aims track by aim.id">
+           <option value="">-- choose One --</option>
+         </select>
+       </div>
+
+       <div class="form-group">
+        <label>Any Health Conditions?</label>
+        <select ng-model="userObj.Condition" ng-options="condition.name for condition in conditions track by condition.id">
+         <option value="">-- choose One --</option>
+       </select>
+     </div>
+
+     <input class="button-primary" value="submit" type="submit" >
+   </form>
+ </div>
+
+</div>
+</div>
+
+  <!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
