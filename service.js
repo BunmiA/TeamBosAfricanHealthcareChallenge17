@@ -15,7 +15,7 @@ var bodyParser = require('body-parser');
 
 var twilio = require('twilio');
 
-
+var name='';
 
 mongoose.connect(config.db.url);
 
@@ -86,7 +86,7 @@ Hospital.findOne({_id: hospitalId }, function(err, hospital) {
 
 app.get('/getNutritionStats', function (req, res) {
    var user ={};
-        user.Name='Simi';
+        user.Name=name;
         user.Number='+447414918685';
         user.Age='24';
         user.Aim='Increased Energy Levels';
@@ -189,7 +189,8 @@ app.post('/submit', function(req, res) {
 
     //log input
     var userObj=req.body;
-    var name=userObj.Name;
+//    var name=userObj.Name;
+      name=userObj.Name;
     console.log(name);
     var number=userObj.Number;
     console.log(number);
