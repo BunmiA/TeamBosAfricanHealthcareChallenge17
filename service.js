@@ -95,9 +95,38 @@ app.get('/getNutritionStats', function (req, res) {
 
         user.labels1= ['Beans/Nuts','Grains','Eggs/Milk','Meat/Fish','Vegetable','Fruits'];
         user.data1= [11,6,12,4,7,15];
-        user.table= ['Calcium=Eggs/Milk,Nuts,Vegetables,Fruits,Grains','Zinc=Meat/Fish,Vegetables,Grains,Vegetables','Iron=Meat/Fish,Vegetables,Grains,Beans','Vitamin A=Vegetables,Fruit','Vitamin B9=Grains,Vegetables,Beans/Nuts,Fruits','Vitamin B12=Meat/Fish','Vitamin D=Fish,Eggs','Vitamin E=Vegetables,Fruits'];
+        //user.table= ['Calcium=Eggs/Milk,Nuts,Vegetables,Fruits,Grains','Zinc=Meat/Fish,Vegetables,Grains,Vegetables','Iron=Meat/Fish,Vegetables,Grains,Beans','Vitamin A=Vegetables,Fruit','Vitamin B9=Grains,Vegetables,Beans/Nuts,Fruits','Vitamin B12=Meat/Fish','Vitamin D=Fish,Eggs','Vitamin E=Vegetables,Fruits'];
         user.labels2=['Calcium','Zinc','Iron','Vitamin A','Vitamin B9','Vitamin B12','Vitamin D','Vitamin E']
         user.data2= [2,2,2,2,2,2,2,2];
+
+        user.nutrients=[
+                              {
+                                   "name" : "Calcium",
+                                   "example" : "Eggs/Milk,Nuts,Vegetables,Fruits,Grains"
+                               },{
+                                  "name" : "Zinc",
+                                  "example" : "Meat/Fish,Vegetables,Grains,Vegetables"
+                               },{
+                                   "name" : "Iron",
+                                   "example" : "Meat/Fish,Vegetables,Grains,Beans"
+                               },{
+                                   "name" : "Vitamin A",
+                                   "example" : "Vegetables,Fruit"
+                               },
+                               {
+                                "name" : "Vitamin B9",
+                                "example" : "Grains,Vegetables,Beans/Nuts,Fruits"
+                                                              },
+                               {
+                                "name" : "Vitamin B12",
+                                "example" : "Meat/Fish"
+                                },
+                                {
+                                 "name" : "Vitamin E",
+                                 "example" : "Vegetables,Fruits"
+                                 }
+
+                           ];
         console.log(user);
   res.json(user);
 })
