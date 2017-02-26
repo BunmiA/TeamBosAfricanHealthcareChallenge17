@@ -102,28 +102,28 @@ app.get('/getNutritionStats', function (req, res) {
         user.nutrients=[
                               {
                                    "name" : "Calcium",
-                                   "example" : "Eggs/Milk,Nuts,Vegetables,Fruits,Grains"
+                                   "example" : "Eggs/Milk,Ogi, Groundnuts,Efo, Ewedu,Fruits(e.g Mango, Pineapple, Paw paw),Rice, Groundrice"
                                },{
                                   "name" : "Zinc",
-                                  "example" : "Meat/Fish,Vegetables,Grains,Vegetables"
+                                  "example" : "Assorted beef, Fish(e.g Catfish, Tiliapia),Vegetables(e.g Efo, Ewedu), Rice,Groundrice, Vegetables"
                                },{
                                    "name" : "Iron",
-                                   "example" : "Meat/Fish,Vegetables,Grains,Beans"
+                                   "example" : "Assorted beef, Fish(e.gCatfish, Tiliapia),Vegetables(e.g Efo, Ewedu),Grains, Beans, Moi Moi, Akara"
                                },{
                                    "name" : "Vitamin A",
-                                   "example" : "Vegetables,Fruit"
+                                   "example" : "Vegetables(e.g Efo, Ewedu),Fruits(e.g Mango, Pineapple, Paw paw)"
                                },
                                {
                                 "name" : "Vitamin B9",
-                                "example" : "Grains,Vegetables,Beans/Nuts,Fruits"
+                                "example" : "Rice, groundrice,Vegetables,Beans, Moi Moi, Akara, groundNuts,Fruits(e.g Mango, Pineapple, Paw paw)"
                                                               },
                                {
                                 "name" : "Vitamin B12",
-                                "example" : "Meat/Fish"
+                                "example" : "Assorted beef, Fish(e.g Catfish, Tiliapia)"
                                 },
                                 {
                                  "name" : "Vitamin E",
-                                 "example" : "Vegetables,Fruits"
+                                 "example" : "Vegetables(e.g Efo, Ewedu),Fruits(e.g Mango, Pineapple, Paw paw)"
                                  }
 
                            ];
