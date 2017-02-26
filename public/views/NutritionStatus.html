@@ -45,6 +45,28 @@
         </canvas> 
       </div>
 
+      <div>
+        <table class="u-full-width">
+          <thead>
+            <tr>
+              <th>Micronutrients
+              </th>
+              <th>Example Foods
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="nutrient in userObj.nutrients track by $index ">
+              <td>{{nutrient.name}}
+              </td>
+              <td>
+                {{nutrient.example}}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
     </div>
   </div>
 
